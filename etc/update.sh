@@ -46,7 +46,7 @@ then
    echo -e ""$E"No Internet connection!"
    exit
 fi
-if [[ $(id -u) != 0 ]]
+if [[ $EUID -ne 0 ]]
 then
    echo -e ""$E"Permission denied!"
    exit
